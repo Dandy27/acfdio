@@ -7,20 +7,19 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
       ),
       body: Center(
         child: Wrap(
           spacing: 10,
           children: [
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () => Get.toNamed('/movies', arguments: 'populares'),
               icon: const Icon(Icons.people_alt_outlined),
               label: const Text('Populares'),
             ),
-          
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () => Get.toNamed('/movies', arguments: 'maisVotados'),
               icon: const Icon(Icons.people_alt_outlined),
               label: const Text('Mais Votados'),
             ),
